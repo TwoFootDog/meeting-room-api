@@ -1,0 +1,9 @@
+success:
+  code: "0000"
+  msg: "성공"
+userNotFound:
+  code: "-1000"
+  msg : "존재하지 않는 회원입니다"
+unKnownError:
+  code: "-9999"
+  msg: "알수 없는 에러. 시스템실 연락바람"
