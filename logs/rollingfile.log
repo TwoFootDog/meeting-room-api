@@ -1,9 +1,9 @@
-[INFO ] 2021-07-29 00:43:39.093 [main] [/meetingroom/api/v1] - Initializing Spring embedded WebApplicationContext
-[INFO ] 2021-07-29 00:43:39.096 [main] ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1172 ms
-[INFO ] 2021-07-29 00:43:39.617 [main] ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
-[INFO ] 2021-07-29 00:43:39.766 [main] Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-[INFO ] 2021-07-29 00:43:39.786 [main] TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/meetingroom/api/v1'
-[INFO ] 2021-07-29 00:43:39.951 [main] MeetingRoomApiApplication - Started MeetingRoomApiApplication in 2.399 seconds (JVM running for 3.625)
-[INFO ] 2021-07-29 00:43:40.895 [http-nio-8080-exec-1] [/meetingroom/api/v1] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-[INFO ] 2021-07-29 00:43:40.895 [http-nio-8080-exec-1] DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-[INFO ] 2021-07-29 00:43:40.897 [http-nio-8080-exec-1] DispatcherServlet - Completed initialization in 1 ms
+[INFO ] 2021-07-31 01:21:05.128 [main] ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1010 ms
+[INFO ] 2021-07-31 01:21:05.547 [main] ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 2021-07-31 01:21:05.672 [main] Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[INFO ] 2021-07-31 01:21:05.687 [main] TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/meetingroom/api/v1'
+[INFO ] 2021-07-31 01:21:05.859 [main] MeetingRoomApiApplication - Started MeetingRoomApiApplication in 2.015 seconds (JVM running for 3.275)
+[INFO ] 2021-07-31 01:21:09.067 [http-nio-8080-exec-1] [/meetingroom/api/v1] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2021-07-31 01:21:09.067 [http-nio-8080-exec-1] DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 2021-07-31 01:21:09.067 [http-nio-8080-exec-1] DispatcherServlet - Completed initialization in 0 ms
+[INFO ] 2021-07-31 01:21:09.107 [http-nio-8080-exec-1] ProjectController - info : Hello world

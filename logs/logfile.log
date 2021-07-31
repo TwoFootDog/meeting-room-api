@@ -4852,3 +4852,63 @@ java.lang.IllegalArgumentException: Invalid character found in method name [0x16
 [INFO ] 2021-07-29 00:43:40.895  [http-nio-8080-exec-1] [/meetingroom/api/v1] - Initializing Spring DispatcherServlet 'dispatcherServlet'
 [INFO ] 2021-07-29 00:43:40.895  [http-nio-8080-exec-1] DispatcherServlet - Initializing Servlet 'dispatcherServlet'
 [INFO ] 2021-07-29 00:43:40.897  [http-nio-8080-exec-1] DispatcherServlet - Completed initialization in 1 ms
+[INFO ] 2021-07-31 01:06:05.443  [main] MeetingRoomApiApplication - Starting MeetingRoomApiApplication using Java 11 on SKCC21N00518 with PID 26912 (C:\workspace\java\meeting-room-api\target\classes started by Administrator in C:\workspace\java\meeting-room-api)
+[INFO ] 2021-07-31 01:06:05.459  [main] MeetingRoomApiApplication - The following profiles are active: local
+[INFO ] 2021-07-31 01:06:06.750  [main] TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[INFO ] 2021-07-31 01:06:06.750  [main] Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[INFO ] 2021-07-31 01:06:06.750  [main] StandardService - Starting service [Tomcat]
+[INFO ] 2021-07-31 01:06:06.765  [main] StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.45]
+[INFO ] 2021-07-31 01:06:06.859  [main] [/meetingroom/api/v1] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2021-07-31 01:06:06.859  [main] ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1353 ms
+[INFO ] 2021-07-31 01:06:07.360  [main] ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 2021-07-31 01:06:07.501  [main] Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[INFO ] 2021-07-31 01:06:07.516  [main] TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/meetingroom/api/v1'
+[INFO ] 2021-07-31 01:06:07.719  [main] MeetingRoomApiApplication - Started MeetingRoomApiApplication in 2.711 seconds (JVM running for 7.165)
+[INFO ] 2021-07-31 01:15:23.991  [main] MeetingRoomApiApplication - Starting MeetingRoomApiApplication using Java 11 on SKCC21N00518 with PID 29808 (C:\workspace\java\meeting-room-api\target\classes started by Administrator in C:\workspace\java\meeting-room-api)
+[INFO ] 2021-07-31 01:15:24.006  [main] MeetingRoomApiApplication - The following profiles are active: local
+[INFO ] 2021-07-31 01:15:25.426  [main] TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[INFO ] 2021-07-31 01:15:25.450  [main] Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[INFO ] 2021-07-31 01:15:25.450  [main] StandardService - Starting service [Tomcat]
+[INFO ] 2021-07-31 01:15:25.474  [main] StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.45]
+[INFO ] 2021-07-31 01:15:25.603  [main] [/meetingroom/api/v1] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2021-07-31 01:15:25.603  [main] ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1562 ms
+[INFO ] 2021-07-31 01:15:26.147  [main] ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 2021-07-31 01:15:26.309  [main] Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[INFO ] 2021-07-31 01:15:26.333  [main] TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/meetingroom/api/v1'
+[INFO ] 2021-07-31 01:15:26.579  [main] MeetingRoomApiApplication - Started MeetingRoomApiApplication in 2.874 seconds (JVM running for 4.374)
+[INFO ] 2021-07-31 01:18:51.799  [http-nio-8080-exec-3] [/meetingroom/api/v1] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2021-07-31 01:18:51.799  [http-nio-8080-exec-3] DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 2021-07-31 01:18:51.807  [http-nio-8080-exec-3] DispatcherServlet - Completed initialization in 0 ms
+[WARN ] 2021-07-31 01:19:37.810  [http-nio-8080-exec-1] DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported]
+[INFO ] 2021-07-31 01:20:02.713  [main] MeetingRoomApiApplication - Starting MeetingRoomApiApplication using Java 11 on SKCC21N00518 with PID 27148 (C:\workspace\java\meeting-room-api\target\classes started by Administrator in C:\workspace\java\meeting-room-api)
+[INFO ] 2021-07-31 01:20:02.736  [main] MeetingRoomApiApplication - The following profiles are active: local
+[INFO ] 2021-07-31 01:20:03.684  [main] TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[INFO ] 2021-07-31 01:20:03.700  [main] Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[INFO ] 2021-07-31 01:20:03.700  [main] StandardService - Starting service [Tomcat]
+[INFO ] 2021-07-31 01:20:03.700  [main] StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.45]
+[INFO ] 2021-07-31 01:20:03.779  [main] [/meetingroom/api/v1] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2021-07-31 01:20:03.779  [main] ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1028 ms
+[INFO ] 2021-07-31 01:20:04.196  [main] ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 2021-07-31 01:20:04.307  [main] Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[INFO ] 2021-07-31 01:20:04.323  [main] TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/meetingroom/api/v1'
+[INFO ] 2021-07-31 01:20:04.521  [main] MeetingRoomApiApplication - Started MeetingRoomApiApplication in 2.044 seconds (JVM running for 3.313)
+[INFO ] 2021-07-31 01:20:09.446  [http-nio-8080-exec-1] [/meetingroom/api/v1] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2021-07-31 01:20:09.446  [http-nio-8080-exec-1] DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 2021-07-31 01:20:09.446  [http-nio-8080-exec-1] DispatcherServlet - Completed initialization in 0 ms
+[INFO ] 2021-07-31 01:20:09.486  [http-nio-8080-exec-1] ProjectController - info : Hello world
+[INFO ] 2021-07-31 01:21:04.086  [main] MeetingRoomApiApplication - Starting MeetingRoomApiApplication using Java 11 on SKCC21N00518 with PID 25884 (C:\workspace\java\meeting-room-api\target\classes started by Administrator in C:\workspace\java\meeting-room-api)
+[INFO ] 2021-07-31 01:21:04.086  [main] MeetingRoomApiApplication - The following profiles are active: local
+[INFO ] 2021-07-31 01:21:05.050  [main] TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[INFO ] 2021-07-31 01:21:05.065  [main] Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[INFO ] 2021-07-31 01:21:05.065  [main] StandardService - Starting service [Tomcat]
+[INFO ] 2021-07-31 01:21:05.065  [main] StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.45]
+[INFO ] 2021-07-31 01:21:05.128  [main] [/meetingroom/api/v1] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2021-07-31 01:21:05.128  [main] ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1010 ms
+[INFO ] 2021-07-31 01:21:05.547  [main] ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 2021-07-31 01:21:05.672  [main] Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[INFO ] 2021-07-31 01:21:05.687  [main] TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/meetingroom/api/v1'
+[INFO ] 2021-07-31 01:21:05.859  [main] MeetingRoomApiApplication - Started MeetingRoomApiApplication in 2.015 seconds (JVM running for 3.275)
+[INFO ] 2021-07-31 01:21:09.067  [http-nio-8080-exec-1] [/meetingroom/api/v1] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2021-07-31 01:21:09.067  [http-nio-8080-exec-1] DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 2021-07-31 01:21:09.067  [http-nio-8080-exec-1] DispatcherServlet - Completed initialization in 0 ms
+[INFO ] 2021-07-31 01:21:09.107  [http-nio-8080-exec-1] ProjectController - info : Hello world

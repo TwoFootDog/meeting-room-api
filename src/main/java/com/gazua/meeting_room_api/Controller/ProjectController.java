@@ -3,7 +3,9 @@ package com.gazua.meeting_room_api.Controller;
 import com.gazua.meeting_room_api.Model.Common.ResDto;
 import com.gazua.meeting_room_api.Model.Project.CreateProjectReqDto;
 import com.gazua.meeting_room_api.Model.Project.CreateProjectResDto;
+import com.gazua.meeting_room_api.Model.Project.GetProjectResDto;
 import com.gazua.meeting_room_api.Service.Common.MessageService;
+import com.gazua.meeting_room_api.Service.ProjectService;
 import io.swagger.annotations.ApiOperation;
 import lombok.AllArgsConstructor;
 import org.apache.logging.log4j.LogManager;
@@ -20,7 +22,7 @@ import javax.servlet.http.HttpServletResponse;
 @RequestMapping("/project")
 public class ProjectController {
 
-    private final MessageService messageService;    // 공통 메시지 처리를 위한 서비스
+    private final ProjectService projectService;    // 프로젝트 서비스
     private static final Logger logger = LogManager.getLogger(ProjectController.class); // 로깅 객체
 
     @ApiOperation(  // swagger 작성
@@ -28,19 +30,18 @@ public class ProjectController {
             httpMethod = "POST",
             notes = "프로젝트를 신규 생성하는 API"
     )
+    @PostMapping
     public ResponseEntity<ResDto<CreateProjectResDto>> createProject(@RequestBody CreateProjectReqDto req,
                                                                      HttpServletRequest httpReq) {
         logger.info("info : Hello world");
-        ResDto<CreateProjectResDto> result = new ResDto<>();
-        messageService.setSuccessMessage(result);
+//        ResDto<CreateProjectResDto> result = new ResDto<>();
+        ResDto<CreateProjectResDto> result = projectService.createProject(req);
+
         return new ResponseEntity<>(result, HttpStatus.OK);
     }
 
     @GetMapping(value = "/{projectId}")
-    public ResponseEntity<ResDto<ProjectResDto>>
-
-/*    @GetMapping
-    public ListResDto<CreateProjectResDto> getProjectList(@RequestBody CreateProjectReqDto req, HttpServletRequest httpReq, HttpServletResponse httpRes) {
-        ListResDto<GetProjectListDto> res = new ListResDto<>();
-    }*/
+    public ResponseEntity<ResDto<GetProjectResDto>> getPRoject(@PathVariable String projectNo) {
+        return new ResponseEntity<>(new ResDto<GetProjectResDto>(), HttpStatus.OK);
+    }
 }

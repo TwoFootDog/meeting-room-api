@@ -9,6 +9,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class CreateProjectReqDto {
     String userNo;          // 사용자번호(프로젝트생성자)
-    String projectName;     // 프로젝트 명
-    String projectContents;  // 프로젝트 설명
+    String projNm;     // 프로젝트 명
+    String projComment;  // 프로젝트 설명
 }

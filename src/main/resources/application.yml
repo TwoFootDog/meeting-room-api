@@ -15,7 +15,7 @@ spring:
 # db 접속 관련
 spring:
   datasource:
-    url: jdbc:mariadb://meeting-room-db.cklyw6tgbrhb.ap-northeast-2.rds.amazonaws.com:3306/meeting-room-db
+    url: jdbc:mariadb://meeting-room-db.cklyw6tgbrhb.ap-northeast-2.rds.amazonaws.com:3306/meetingroomdb
     username: admin
     password: '!23qweASD'
     driver-class-name: org.mariadb.jdbc.Driver
