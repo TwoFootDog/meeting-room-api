@@ -7,3 +7,11 @@ userNotFound:
 unKnownError:
   code: "-9999"
   msg: "알수 없는 에러. 시스템실 연락바람"
+
+projectName:
+  code: "-8001"
+  msg: "필수값 미입력(프로젝트명)"
+
+projectNickName:
+  code: "-8002"
+  msg: "필수값 미입력(프로젝트 내 닉네임)"

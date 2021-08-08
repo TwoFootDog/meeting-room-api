@@ -3,9 +3,68 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.gazua.meeting_room_api.Mapper.ProjectMapper">
-<!--    <insert id="createProject" parameterType="com.gazua.meeting_room_api.Model.Project.CreateProjectReqDto"-->
-<!--    userGeneratedKey="true" keyProperty="id">-->
-<!--        INSERT INTO T_PRO_MST-->
-<!--        VALUES ()-->
-<!--    </insert>-->
+    <insert id="createProject" parameterType="map">
+            INSERT INTO T_PROJ_INFO_MAST
+            (PROJ_NM,
+            PROJ_PASSWD,
+            PROJ_COMMENT,
+            REMOVE_DT,
+            REG_ID,
+            REG_DT,
+            UPD_ID,
+            UPD_DT)
+            VALUES
+            (#{projNm},
+            LPAD(CONV(FLOOR(RAND()*POW(36,10)), 10, 36), 10, 0),
+            #{projComment},
+            NULL,
+            'SYSTEM',
+            SYSDATE(),
+            'SYSTEM',
+            SYSDATE())
+        <selectKey resultType="int"
+                   keyProperty="projId"
+                   order="AFTER">
+            SELECT LAST_INSERT_ID()     <!-- 가장 마지막에 INSERT 된 PK를 요청Map으로 리턴 -->
+        </selectKey>
+    </insert>
+
+    <select id="selectProjectByPk" parameterType="int" resultType="map">
+        SELECT
+            PROJ_ID AS projId,
+            PROJ_NM AS projNm,
+            PROJ_PASSWD AS projPasswd,
+            PROJ_COMMENT AS projComment,
+            REMOVE_DT AS removeDt,
+            REG_ID AS regId,
+            REG_DT AS regDt,
+            UPD_ID AS updId,
+            UPD_DT AS updDt
+            FROM T_PROJ_INFO_MAST
+            WHERE 1=1
+            AND PROJ_ID = #{projId}
+    </select>
+
+    <insert id="createUserProjectMapping" parameterType="map">
+        INSERT INTO T_USER_PROJ_MAPP
+        (USER_ID,
+        PROJ_ID,
+        PROJ_NICKNAME,
+        ADMIN_YN,
+        OUT_DT,
+        REG_ID,
+        REG_DT,
+        UPD_ID,
+        UPD_DT)
+        VALUES
+        (#{userId},
+        #{projId},
+        #{projNickname},
+        'Y',
+        NULL,
+        'SYSTEM',
+        SYSDATE(),
+        'SYSTEM',
+        SYSDATE())
+    </insert>
 </mapper>

@@ -1,10 +1,9 @@
 package com.gazua.meeting_room_api.Controller;
 
-import com.gazua.meeting_room_api.Model.Common.ResDto;
-import com.gazua.meeting_room_api.Model.Project.CreateProjectReqDto;
-import com.gazua.meeting_room_api.Model.Project.CreateProjectResDto;
-import com.gazua.meeting_room_api.Model.Project.GetProjectResDto;
-import com.gazua.meeting_room_api.Service.Common.MessageService;
+import com.gazua.meeting_room_api.Dto.Common.ResDto;
+import com.gazua.meeting_room_api.Dto.Project.CreateProjectReqDto;
+import com.gazua.meeting_room_api.Dto.Project.CreateProjectResDto;
+import com.gazua.meeting_room_api.Dto.Project.GetProjectResDto;
 import com.gazua.meeting_room_api.Service.ProjectService;
 import io.swagger.annotations.ApiOperation;
 import lombok.AllArgsConstructor;
@@ -15,7 +14,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import javax.validation.Valid;
 
 @AllArgsConstructor
 @RestController
@@ -31,12 +30,12 @@ public class ProjectController {
             notes = "프로젝트를 신규 생성하는 API"
     )
     @PostMapping
-    public ResponseEntity<ResDto<CreateProjectResDto>> createProject(@RequestBody CreateProjectReqDto req,
+    public ResponseEntity<ResDto<CreateProjectResDto>> createProject(@RequestBody @Valid CreateProjectReqDto req,
                                                                      HttpServletRequest httpReq) {
         logger.info("info : Hello world");
 //        ResDto<CreateProjectResDto> result = new ResDto<>();
         ResDto<CreateProjectResDto> result = projectService.createProject(req);
-
+        logger.info("info : result" + result);
         return new ResponseEntity<>(result, HttpStatus.OK);
     }
 

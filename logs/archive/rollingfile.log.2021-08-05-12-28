@@ -1,0 +1,8 @@
+[INFO ] 2021-08-05 00:26:43.808 [http-nio-8080-exec-1] ProjectController - map.isEmpty() : false
+[INFO ] 2021-08-05 00:27:24.687 [http-nio-8080-exec-1] ProjectController - null
+[WARN ] 2021-08-05 00:27:24.687 [HikariPool-1 housekeeper] HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m10s940ms55µs800ns).
+[INFO ] 2021-08-05 00:27:24.688 [http-nio-8080-exec-1] ProjectController - [Ljava.lang.StackTraceElement;@624a7445
+[INFO ] 2021-08-05 00:27:24.698 [http-nio-8080-exec-1] ProjectController - info : resultResDto(data=CreateProjectResDto(projId=0, projNm=null, projComment=null, projJoinNo=null, projPasswd=null, userId=0), isSuccess=true, code=0000, msg=성공)
+[WARN ] 2021-08-05 00:28:40.093 [HikariPool-1 housekeeper] HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=45s390ms133µs).
+[INFO ] 2021-08-05 00:28:40.310 [SpringContextShutdownHook] ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+[INFO ] 2021-08-05 00:28:40.312 [SpringContextShutdownHook] HikariDataSource - HikariPool-1 - Shutdown initiated...

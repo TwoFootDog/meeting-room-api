@@ -1,8 +1,8 @@
 package com.gazua.meeting_room_api.Service.Common;
 
-import com.gazua.meeting_room_api.Model.Common.ExceptionResDto;
-import com.gazua.meeting_room_api.Model.Common.ResDto;
-import lombok.AllArgsConstructor;
+import com.gazua.meeting_room_api.Dto.Common.ExceptionResDto;
+import com.gazua.meeting_room_api.Dto.Common.ResDto;
+import com.gazua.meeting_room_api.Dto.Common.ResListDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.MessageSource;
 import org.springframework.context.i18n.LocaleContextHolder;
@@ -20,8 +20,15 @@ public class MessageService {
         resDto.setMsg(getMessage(errorCode + ".msg"));
         resDto.setSuccess(false);
     }
-    // 처리가 성공할 경우 메시지를 생성해주는 함수
+    // 처리가 성공할 경우 메시지를 생성해주는 함수(결과값이 단일 건)
     public void setSuccessMessage(ResDto<?> resDto) {
+        resDto.setCode(getMessage("success.code"));
+        resDto.setMsg(getMessage("success.msg"));
+        resDto.setSuccess(true);
+    };
+
+    // 처리가 성공할 경우 메시지를 생성해주는 함수(결과값이 여러 건(List))
+    public void setSuccessMessage(ResListDto<?> resDto) {
         resDto.setCode(getMessage("success.code"));
         resDto.setMsg(getMessage("success.msg"));
         resDto.setSuccess(true);
