@@ -29,22 +29,6 @@
         </selectKey>
     </insert>
 
-    <select id="selectProjectByPk" parameterType="int" resultType="map">
-        SELECT
-            PROJ_ID AS projId,
-            PROJ_NM AS projNm,
-            PROJ_PASSWD AS projPasswd,
-            PROJ_COMMENT AS projComment,
-            REMOVE_DT AS removeDt,
-            REG_ID AS regId,
-            REG_DT AS regDt,
-            UPD_ID AS updId,
-            UPD_DT AS updDt
-            FROM T_PROJ_INFO_MAST
-            WHERE 1=1
-            AND PROJ_ID = #{projId}
-    </select>
-
     <insert id="createUserProjectMapping" parameterType="map">
         INSERT INTO T_USER_PROJ_MAPP
         (USER_ID,
@@ -67,4 +51,57 @@
         'SYSTEM',
         SYSDATE())
     </insert>
+
+    <update id="updateProject" parameterType="map">
+        UPDATE T_PROJ_INFO_MAST
+        SET UPD_ID = #{userId}
+          , UPD_DT = SYSDATE()
+        <if test="projNm!=null and !projNm.equals('')">
+          , PROJ_NM = #{projNm}
+        </if>
+        <if test="projComment!=null and !projComment.equals('')">
+          , PROJ_COMMENT = #{projComment}
+        </if>
+        <if test="removeDt!=null and !removeDt.equals('')">
+          , REMOVE_DT = STR_TO_DATE(#{removeDt}, '%Y%m%d%H%i%s')
+        </if>
+        WHERE 1=1
+        AND PROJ_ID = #{projId}
+    </update>
+
+    <select id="selectProjectByPk" parameterType="int" resultType="map">
+        SELECT
+            A.PROJ_ID AS projId,
+            A.PROJ_NM AS projNm,
+            A.PROJ_PASSWD AS projPasswd,
+            A.PROJ_COMMENT AS projComment,
+            A.REMOVE_DT AS removeDt,
+            B.PROJ_NICKNAME AS projNickname,
+            A.REG_ID AS regId,
+            A.REG_DT AS regDt,
+            A.UPD_ID AS updId,
+            A.UPD_DT AS updDt
+        FROM T_PROJ_INFO_MAST A, T_PROJ_USER_MAPP B
+        WHERE 1=1
+          AND A.PROJ_ID = #{projId}
+          AND B.PROJ_ID = A.PROJ_ID
+    </select>
+
+    <select id="selectProjectByUserId" parameterType="int" resultType="com.gazua.meeting_room_api.Dto.ProjectDto$RResponse">
+        SELECT
+            B.PROJ_ID AS projId,
+            B.PROJ_NM AS projNm,
+            B.PROJ_PASSWD AS projPasswd,
+            B.PROJ_COMMENT AS projComment,
+            B.REMOVE_DT AS removeDt,
+            A.PROJ_NICKNAME AS projNickname,
+            B.REG_ID AS regId,
+            B.REG_DT AS regDt,
+            B.UPD_ID AS updId,
+            B.UPD_DT AS updDt
+        FROM T_PROJ_USER_MAPP A, T_PROJ_INFO_MAST B
+        WHERE 1=1
+          AND A.USER_ID = #{userId}
+          AND B.PROJ_ID = A.PROJ_ID
+    </select>
 </mapper>

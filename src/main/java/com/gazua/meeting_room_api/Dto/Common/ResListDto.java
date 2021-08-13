@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 
 import java.util.List;
 
+/* 공통적으로 사용하는 API 응답값(List)*/
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
