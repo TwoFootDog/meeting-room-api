@@ -13779,3 +13779,24 @@ java.lang.IllegalStateException: Ambiguous handler methods mapped for '/meetingr
 [INFO ] 2021-08-12 15:58:32.509  [http-nio-8080-exec-1] DispatcherServlet - Completed initialization in 2 ms
 [INFO ] 2021-08-12 15:58:32.541  [http-nio-8080-exec-1] HikariDataSource - HikariPool-1 - Starting...
 [INFO ] 2021-08-12 15:58:32.667  [http-nio-8080-exec-1] HikariDataSource - HikariPool-1 - Start completed.
+[INFO ] 2021-08-12 17:43:49.177  [background-preinit] Version - HV000001: Hibernate Validator 6.1.7.Final
+[INFO ] 2021-08-12 17:43:49.192  [main] MeetingRoomApiApplication - Starting MeetingRoomApiApplication using Java 11 on SKCC21N00518 with PID 32068 (C:\workspace\java\meeting-room-api\target\classes started by Administrator in C:\workspace\java\meeting-room-api)
+[INFO ] 2021-08-12 17:43:49.192  [main] MeetingRoomApiApplication - The following profiles are active: local
+[INFO ] 2021-08-12 17:43:50.391  [main] TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[INFO ] 2021-08-12 17:43:50.407  [main] Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[INFO ] 2021-08-12 17:43:50.407  [main] StandardService - Starting service [Tomcat]
+[INFO ] 2021-08-12 17:43:50.407  [main] StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.45]
+[INFO ] 2021-08-12 17:43:50.485  [main] [/meetingroom/api/v1] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2021-08-12 17:43:50.485  [main] ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1246 ms
+[INFO ] 2021-08-12 17:43:51.002  [main] ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 2021-08-12 17:43:51.143  [main] Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[INFO ] 2021-08-12 17:43:51.158  [main] TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/meetingroom/api/v1'
+[INFO ] 2021-08-12 17:43:51.393  [main] MeetingRoomApiApplication - Started MeetingRoomApiApplication in 2.53 seconds (JVM running for 4.44)
+[INFO ] 2021-08-12 17:43:53.396  [http-nio-8080-exec-1] [/meetingroom/api/v1] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2021-08-12 17:43:53.401  [http-nio-8080-exec-1] DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 2021-08-12 17:43:53.402  [http-nio-8080-exec-1] DispatcherServlet - Completed initialization in 1 ms
+[INFO ] 2021-08-12 17:43:53.433  [http-nio-8080-exec-1] HikariDataSource - HikariPool-1 - Starting...
+[INFO ] 2021-08-12 17:43:53.544  [http-nio-8080-exec-1] HikariDataSource - HikariPool-1 - Start completed.
+[WARN ] 2021-08-13 06:19:15.854  [HikariPool-1 housekeeper] HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3h2m21s52ms745µs).
+[WARN ] 2021-08-13 10:47:31.148  [HikariPool-1 housekeeper] HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4h28m15s296ms905µs200ns).
+[WARN ] 2021-08-14 02:36:46.889  [HikariPool-1 housekeeper] HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6h54m15s853ms363µs600ns).
